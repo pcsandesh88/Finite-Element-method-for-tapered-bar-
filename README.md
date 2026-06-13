@@ -48,6 +48,72 @@ E = Young's modulus
 The element stiffness matrix relates nodal forces and nodal displacements.
 
 
+Midpoint Area Approximation
+
+Since each FEM element is assumed to have a constant area, the area is evaluated at the midpoint of the element.
+
+Midpoint location:
+
+x
+m
+	​
+
+=(e−
+2
+1
+	​
+
+)l
+e
+	​
+
+
+Diameter at midpoint:
+
+d
+e
+	​
+
+=d
+1
+	​
+
++
+L
+(d
+2
+	​
+
+−d
+1
+	​
+
+)
+	​
+
+x
+m
+	​
+
+
+Area:
+
+A
+e
+	​
+
+=
+4
+π
+	​
+
+d
+e
+2
+	​
+
+
+This midpoint area is used to calculate the stiffness matrix of the element.
 **Global Stiffness Matrix**
 After calculating the stiffness matrix of each element, all element matrices are assembled into a global stiffness matrix:
 [K]{U}={F}
